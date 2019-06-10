@@ -1,0 +1,18 @@
+<h1>Welcome!</h1>
+
+<div class="container">Manage your <a routerLink="/todos">todos</a></div>
+
+<div class="container">
+  Click here to get customized welcome message
+  <input type="text" name="textMessage" [(ngModel)]="textMessage" />
+  <button (click)="getWelcomeMessage()" class="btn btn-success">
+    Get message
+  </button>
+</div>
+
+<div class="container" *ngIf="customMessage">
+  <h2>This is your custom message</h2>
+  {{ customMessage }}
+</div>
+
+<div class="alert alert-warning" *ngIf="errorMessage">{{ errorMessage }}</div>
