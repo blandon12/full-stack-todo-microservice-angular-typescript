@@ -23,7 +23,6 @@ export class WelcomeComponent implements OnInit {
   }
 
   getWelcomeMessage() {
-    console.log(this.dataService.excuteWelcomeData(this.textMessage));
     this.dataService
       .excuteWelcomeData(this.textMessage)
       .subscribe(
@@ -34,11 +33,9 @@ export class WelcomeComponent implements OnInit {
 
   handleSuccessfulResponse(response) {
     this.customMessage = response.message;
-    console.log(response);
   }
 
   handleErrorMessage(error) {
     this.errorMessage = error.error.message;
-    console.log(error.error.message);
   }
 }

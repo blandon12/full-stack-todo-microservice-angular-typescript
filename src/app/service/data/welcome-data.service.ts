@@ -19,8 +19,7 @@ export class WelcomeDataService {
     });
 
     return this.http.get<HelloWorldBean>(
-      `http://localhost:8080/helloWorld/${textMessage}`,
-      { headers: header }
+      `http://localhost:8080/helloWorld/${textMessage}`
     );
   }
 
